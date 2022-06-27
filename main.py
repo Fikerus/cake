@@ -6,7 +6,7 @@ import os
 cakefile = ''
 filename = ''
 
-with os.popen('ls') as s:
+with os.popen('ls -a') as s:
     ls = [x[:-1] for x in s]
     if '.cake' in ls:
         filename = '.cake'
