@@ -1,0 +1,20 @@
+# Comments look like this
+# "#show" will print commands before running them
+
+echo "Example command"
+
+gcc main.c -o example
+./example
+
+
+echo ""
+
+
+# Now the same with "#show"
+
+#show
+
+echo "Example command"
+
+gcc main.c -o example
+./example
