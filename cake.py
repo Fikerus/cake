@@ -27,4 +27,7 @@ for command in (commands := [x for x in cakefile.split('\n') if x]):
     if not(comment_f) and show_f:
         print(command)
 
-    os.system(command)
+    error = os.system(command)
+    if error:
+        print(f"\nExited with error code: {error}")
+        exit(error)
