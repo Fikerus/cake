@@ -3,6 +3,10 @@
 import os
 
 
+class clicolors:
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+
 cakefile = ''
 filename = ''
 
@@ -29,5 +33,5 @@ for command in (commands := [x for x in cakefile.split('\n') if x]):
 
     error = os.system(command)
     if error:
-        print(f"\nExited with error code: {error}")
+        print(f"{clicolors.FAIL}\nExited with error code: {error}{clicolors.ENDC}")
         exit(error)
